@@ -50,7 +50,8 @@
   </header>
   <div class="d-flex text-center">
     <h2>Create New Recipe</h2>
-    <button class="btn btn-warning ">Save</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-warning " id="saveRecipe">Save</button>
   </div>
   <hr class="btn-warning">
 
@@ -60,34 +61,29 @@
       <h4>Recipe Title:</h4>
       <input class="form-control" type="text" placeholder="Enter Title"><br>
       <h4>Recipe Image:</h4>
-     
+      <div class="container d-flex gap-5">
       <div>
-        <div class="mb-4 d-flex justify-content-center">
-          <img src="./img/ajouter1.jpg" alt="" class="img-fluid container col-md-8 ">
-        </div>
-        <div class="d-flex justify-content-center">
-            <div class="btn btn-warning btn-rounded">
-              <img class="form-label text-white m-1" for="customFile1"    width="50px" src="./img/add-photo.png">
-                <label class="form-label text-white m-1" for="customFile1">Add photo</label>
-                <input type="file" class="form-control d-none" id="customFile1" onchange="displaySelectedImage(event, 'selectedImage')" />
+        <div class="mb-4 d-flex justify-content-center" id="add">
+          <div class="d-flex justify-content-center align-content-center">
+            <div class="btn btn-rounded align-content-center">
+              <img class="form-label text-white m-1 d-flex justify-content-center align-content-center" for="customFile1" width="50px" src="./img/add-photo.png">
+              <input  <img class="form-label text-white m-1 d-flex justify-content-center align-content-center" type="file" class="form-control " id="customFile1"
+                onchange="displaySelectedImage(event, 'selectedImage')" />
             </div>
-        </div>
-        <div class="d-flex justify-content-left">
-          <div class="btn btn btn-rounded">
-              <img class="form-label text-white m-1" for="customFile1"    width="50px" src="./img/add-photo.png">
-              <input type="file" class="form-control d-none" id="customFile1" onchange="displaySelectedImage(event, 'selectedImage')" />
           </div>
+        </div>
       </div>
-        
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt saepe vero eaque aperiam error fuga placeat sed, 
+        modi dolor libero velit odio neque laudantium vel qui aut exercitationem quibusdam corrupti.
+        laudantium vel qui aut exercitationem quibusdam corrupti.laudantium vel qui aut exercitationem quibusdam corrupti.
+        laudantium vel qui aut exercitationem quibusdam corrupti.laudantium vel qui aut exercitationem quibusdam corrupti.</p>
+
     </div>
-   
+
 
     </section>
     <section>
       <form action="">
-        <div>
-
-        </div>
         <h4>Description:</h4>
         <div class="form-floating">
           <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
@@ -95,41 +91,47 @@
           <label for="floatingTextarea2">Comments</label>
         </div>
         <h4>Ingredients:</h4>
-        <input class="form-control" type="text" placeholder="1 x 15 eggs"><br>
-        <input class="form-control" type="text" placeholder="1 cup corn"><br>
-        <input class="form-control" type="text" placeholder="Add ingredients"><br>
+       
+        <div id="ingredientsContainer">
+          <button type="button" class="btn btn-warning mt-3" id="addIngredient">Add Ingredient</button>
+      </div>
         <h6>+ Header</h6>
-        <br><br>
-        <h4>Instruction:</h4><br>
-        <h6>Tap to edit</h6><br><br><br>
-        <div class="step1">
-          <h4>Step 1</h4>
-          <img src="./img/add-photo.png" alt="" class="img-fluid">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis voluptates, vel cum deserunt corporis
-            beatae similique libero iste officia tempore, quia at, </p>
-        </div>
-        <div class="step2">
-          <h4>Step 2</h4>
-          <img src="./img/add-photo.png" alt="" class="img-fluid">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis voluptates, vel cum deserunt corporis
-            beatae similique libero iste officia tempore, quia at, </p>
-        </div>
+        <br>
+        <h4>Instruction:</h4>
         <input class="form-control" type="text" placeholder="Write Instruction">
         <h6>+ Header</h6>
-        <br><br><br>
-        <h4>Servings:</h4>
-        <input class="form-control" type="text" placeholder="#">
+        <br>
+        <div class="container text text-center" id="cal">
+          <form action="">
+            <h4>Nutrition Information</h4><br>
+            
+          <label for="" class="col-1">Calories:</label>
+          <input type="text" placeholder="218.9 Kcal"><br><br>
+          <label for="">Total Fat:</label>
+          <input type="text" placeholder=" 10.7 g"><br><br>
+          <label for="">Protein:</label>
+          <input type="text" placeholder="7.9 g"><br><br>
+          <label for="">Carbohydrate:</label>
+          <input type="text" placeholder="22.2 g"><br><br>
+          <label for="">Cholesterol:</label>
+          <input type="text" placeholder="37.2 mg"><br><br>
+        </form>
+        </div><br>
+        <div class="container ">
+          <h4>Cooking Time:</h4>
+          <input class="form-control" type="number" placeholder="Hours 0"><br>
+          <input class="form-control" type="number" placeholder="Minutes 0">
+        </div>
+
         <h6>How many portions does this recipe make?</h6>
-        <br><br><br>
-        <h4>Cooking Time:</h4>
-        <input class="form-control" type="time" placeholder="Hours 0">
-        <input class="form-control" type="time" placeholder="Minutes 0">
-        <h6>How many portions does this recipe make?</h6>
-        <br><br><br><br>
-        <h4>Prep Time:</h4>
-        <input class="form-control" type="time" placeholder="Hours 0">
-        <input class="form-control" type="time" placeholder="Minutes 0">
-        <h6>How many portions does this recipe make?</h6>
+        <br>
+        <div class="container ">
+          <h4 class="col-2">Prep Time:</h4>
+          <input class="form-control" type="number" placeholder="Hours 0" ><br>
+          <input class="form-control" type="number" placeholder="Minutes 0">
+        </div>
+
+        <h6>How many portions does this recipe make?</h6><br>
         <h3>Cuisine:</h3>
         <select class="form-select">
           <option value="marocaine">Marocaine</option>
@@ -137,7 +139,7 @@
           <option value="libya">Libyan</option>
           <option value="tunisian">Tunisian</option>
           <option value="marocaine">Marocaine</option>
-        </select>
+        </select><br>
         <h3>Collection</h3>
         <select class="form-select">
           <option value="marocaine">Marocaine</option>
@@ -145,14 +147,62 @@
           <option value="libya">Libyan</option>
           <option value="tunisian">Tunisian</option>
           <option value="marocaine">Marocaine</option>
-        </select>
-        <button type="submit" class="btn btn-warning">Submit</button>
+        </select><br><br>
+        <button type="submit" class="btn btn-warning ">Submit</button>
       </form>
 
     </section>
   </div>
   <hr>
-  <footer class="container-fluid bg-warning ">
+  <footer class="container-fluid bg-warning">
+    <div class="col justify-content-center">
+      <img src="./img/logo.png" alt="logo" class="col-md-2" width="20%">
+    </div>
+    <div class="col justify-content-center mt-3">
+      <p class="col-md-4 text-center">How many portions does this recipe make? How many portions does this recipe make?
+        How many portions does this recipe make? How many portions does this</p>
+    </div>
+    <div class="row justify-content-center mt-3">
+      <div class="col justify-content-center mt-3">
+        <div class="col-md-4">
+          <h3 class="text-center">Quick Links</h3>
+          <p>HOME</p>
+          <p>About us</p>
+          <p>Contact us</p>
+        </div>
+      </div>
+      <div class="col justify-content-center mt-3">
+        <div class="col-md-4">
+          <h3 class="text-center">LEGAL</h3>
+          <p>HOME</p>
+          <p>About us</p>
+          <p>Contact us</p>
+        </div>
+      </div>
+      <div class="col justify-content-center mt-3">
+        <div class="col-md-4">
+          <h3 class="text-center">NewsLetter</h3>
+          <p class="text-center">Subscribe to our newsletter to get more free tips</p>
+          <input type="email" class="form-control mb-2" placeholder="Enter your email">
+          <button class="btn btn-warning btn-block">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="col justify-content-center mt-3">
+      <div class="col-md-4">
+        <p class="text-center">@2024copyrithcookingcopyrithcooking</p>
+        <div class="d-flex justify-content">
+          <img src="./img/facebook.png" alt="" width="20%">
+          <img src="./img/youtube.png" alt="" width="20%">
+          <img src="./img/instagram.png" alt="" width="20%">
+          <img src="./img/linkedin.png" alt="" width="20%">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- <footer class="container-fluid bg-warning ">
     <img src="" alt="logo" class="col-md-4">
     <p class="col-md-4">how many portions does this recipe make ?
       how many portions does this recipe make ?
@@ -187,7 +237,7 @@
     </div>
 
 
-  </footer>
+  </footer> -->
   <script src="script.js"></script>
 </body>
 

@@ -1,0 +1,24 @@
+#add{
+    background-color: rgb(255, 255, 255);
+    border: solid;
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0.426);
+    height:300px;
+    width: 400px;
+    align-items: center;
+}
+#img1{
+    width: 50px;
+    
+}
+#cal{
+    background-color:rgb(251, 247, 239);
+    border: solid;
+    border-radius: 10px;
+    border-color: rgb(255, 166, 0);
+    height:360px;
+    box-shadow: 20px;
+}
+#ingredientsContainer input {
+    margin-bottom: 10px;
+}
