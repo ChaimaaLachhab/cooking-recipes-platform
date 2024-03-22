@@ -3,60 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <title>Document</title>
+    <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/libs/rateyo/rateyo.css">
+   
 </head>
-<body class="container">
-    <div> <h1 class="text text-danger col-md-8"> Your D aily Dish A<h1 class="foodtitl">Food</h1>Journey</h1>
+<body>
+  
+    <div class="container"> 
+      <h1 class="text-danger col-md-8">Your Daily Dish - A <span class="text-primary">Food</span> Journey</h1>
+      <img src="./img/dish.jpg" class="float-end rounded-circle img-fluid" alt="Cinque Terre" width="304" height="236"> 
         <p>Welcome to Delicious Delights, your ultimate destination for<br>
             culinary inspiration and gastronomic adventures</p>
-            <img src="./img/dish.png">
+           
     </div>
-    <div>
-        <img src="./img/GLoq.jpg">
-        <h1>Share Your <h1 class="foodtitl">Recipees</h1></h1>
+   
+    <div class="container-fluid">
+      <img src="./img/GLoq.jpg" class="float-start rounded img-fluid" width="304" height="236">
+        <h1>Share Your Recipees</h1>
         <p> Dive into our extensive collection of recipes curated by culinary experts from around the globe. Whether you're craving
             comfort food classics, exotic international dishes, or healthy options for mindful eating, our recipe database has something
             for everyone.</p>
     </div>
+    <div class="rateyo"></div>
+    <section class="section-recipes"></section>
     <div class="trending-recipes"> 
          <h1>Trending Recipes</h1>
          <div class="recipes"> 
-            <img src="./img/balltajin.jpg">
+          <div>
+            
+            
+            <img src= >
+            
+            <h3></h3>
+          </div>
+         </div>
 
          </div>
          <div class="recipes"> 
-            <img src="./img/bastilla.webp">
+            <img src=>
             
          </div>
          <div class="recipes"> 
-            <img src="./img/Harira.jpg">
+            <img src="">
             
          </div>
     </div>
     <div class="explore">
           <div class="recipes">
-            <img src="./img/pizza1.jpg">
+            <img src="">
             <h3>pizza</h3>
           </div>
           <div class="recipes">
-            <img src="./img/ssppagitte.jpg">
+            <img src="">
             <h3>pizza</h3>
           </div>
           <div class="recipes">
-            <img src="./img/grattan.webp">
+            <img src="">
             <h3>pizza</h3>
           </div>
           <div class="recipes">
-            <img src="./img/pizza1.jpg">
+            <img src="">
             <h3>pizza</h3>
           </div>
           <div class="recipes">
-            <img src="./img/ssppagitte.jpg">
+            <img src="">
             <h3>pizza</h3>
           </div>
           <div class="recipes">
-            <img src="./img/grattan.webp">
+            <img src="">
             <h3>pizza</h3>
           </div>
           <div>
@@ -80,6 +97,16 @@
               </select> 
           </div>
           <div></div>
+
     </div>
+    <div></div>
+    <script src="assets/vendor/libs/rateyo/rateyo.js"></script>
+    <script>
+      
+      $(document).ready(function () {
+          $(".rateyo").rateYo();
+      });
+  </script>
 </body>
+
 </html>
