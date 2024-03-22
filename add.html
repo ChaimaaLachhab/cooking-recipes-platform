@@ -5,240 +5,283 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <title>Add Recipe</title>
-
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-      <div class="container">
-        <a class="navbar-brand" href="#">Cooking</a>
-        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Recipe
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Add Recipe</a></li>
-                <li><a class="dropdown-item" href="#">Detailed Recipe</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          </form>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fs-3 fw-bold text-white" href="#">
+        <img src="./img/logo1.png" class="img-fluid" alt="" />
+        CookingRecipes
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav fs-5 ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Recipe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">About</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-  </header>
-  <div class="d-flex text-center">
-    <h2>Create New Recipe</h2>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button class="btn btn-warning " id="saveRecipe">Save</button>
-  </div>
-  <hr class="btn-warning">
+    </div>
+  </nav>
 
-  <br>
-  <div class="container col-md-8">
-    <section class="section_title">
+  <section class="container flex-column col-md-6 col-sm-11 mt-5">
+    <div>
       <h4>Recipe Title:</h4>
-      <input class="form-control" type="text" placeholder="Enter Title"><br>
-      <h4>Recipe Image:</h4>
-      <div class="container d-flex gap-5">
-      <div>
-        <div class="mb-4 d-flex justify-content-center" id="add">
-          <div class="d-flex justify-content-center align-content-center">
-            <div class="btn btn-rounded align-content-center">
-              <img class="form-label text-white m-1 d-flex justify-content-center align-content-center" for="customFile1" width="50px" src="./img/add-photo.png">
-              <input  <img class="form-label text-white m-1 d-flex justify-content-center align-content-center" type="file" class="form-control " id="customFile1"
-                onchange="displaySelectedImage(event, 'selectedImage')" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt saepe vero eaque aperiam error fuga placeat sed, 
-        modi dolor libero velit odio neque laudantium vel qui aut exercitationem quibusdam corrupti.
-        laudantium vel qui aut exercitationem quibusdam corrupti.laudantium vel qui aut exercitationem quibusdam corrupti.
-        laudantium vel qui aut exercitationem quibusdam corrupti.laudantium vel qui aut exercitationem quibusdam corrupti.</p>
-
+      <input class="form-control mb-4" type="text" placeholder="Enter Title" id="title">
+    </div>
+    <div class="mb-4">
+      <h4>Category:</h4>
+      <select class="form-select" id="category">
+        <option value="marocaine">Marocaine</option>
+        <option value="italian">Italian</option>
+        <option value="libya">Libyan</option>
+        <option value="tunisian">Tunisian</option>
+        <option value="marocaine">Marocaine</option>
+      </select>
     </div>
 
+    <div class="mb-4">
+      <h4>Author Photo:</h4>
+      <div class="mb-4 d-flex align-items-center" id="addAuthorPhoto">
+        <div class="btn1 btn-rounded position-relative ms-5">
+          <input type="file" class="form-control visually-hidden" id="customFileAuthor"
+            onchange="displaySelectedAuthorPhoto(event)">
+          <label class="form-label m-1" for="customFileAuthor">
+            <img class="m-1" width="50px" src="./img/add-photo.png" alt="Add Photo">
+          </label>
+        </div>
+        <img id="selectedAuthorPhoto" class="me-5" width="20%" src="">
+        <input type="text" class="form-control mb-2 h-75" id="authorName" placeholder="Author Name">
+      </div>
+    </div>
 
-    </section>
-    <section>
-      <form action="">
+    <div class="mb-4">
+      <h4>Recipe Image:</h4>
+      <div class="mb-4 d-flex flex-column justify-content-center align-items-center" id="add">
+        <div class="btn2 btn-rounded position-relative">
+          <input type="file" class="form-control visually-hidden" id="customFile1"
+            onchange="displaySelectedImage(event)">
+          <label class="form-label m-1" for="customFile1">
+            <img class="m-1" width="50px" src="./img/add-photo.png" alt="Add Photo">
+          </label>
+        </div>
+        <img id="selectedImage" class="m-1" width="20%" src="">
+      </div>
+    </div>
+  </section>
+
+  <section class="container flex-column col-md-6 col-sm-12 mb-5">
+    <form action="">
+      <div class="mb-4">
         <h4>Description:</h4>
         <div class="form-floating">
-          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+          <textarea class="form-control" placeholder="Leave a comment here" id="description"
             style="height: 100px"></textarea>
-          <label for="floatingTextarea2">Comments</label>
+          <label for="description">Comments</label>
         </div>
+      </div>
+
+      <div id="ingredientsContainer" class="mb-4">
         <h4>Ingredients:</h4>
-       
-        <div id="ingredientsContainer">
-          <button type="button" class="btn btn-warning mt-3" id="addIngredient">Add Ingredient</button>
+        <!-- cases -->
+        <button type="button" class="btn btn-warning mt-1" onclick="addIngredient()">Add Ingredient</button>
       </div>
-        <h6>+ Header</h6>
-        <br>
+
+      <div id="instructionsContainer" class="mb-4">
         <h4>Instruction:</h4>
-        <input class="form-control" type="text" placeholder="Write Instruction">
-        <h6>+ Header</h6>
-        <br>
-        <div class="container text text-center" id="cal">
-          <form action="">
-            <h4>Nutrition Information</h4><br>
-            
-          <label for="" class="col-1">Calories:</label>
-          <input type="text" placeholder="218.9 Kcal"><br><br>
-          <label for="">Total Fat:</label>
-          <input type="text" placeholder=" 10.7 g"><br><br>
-          <label for="">Protein:</label>
-          <input type="text" placeholder="7.9 g"><br><br>
-          <label for="">Carbohydrate:</label>
-          <input type="text" placeholder="22.2 g"><br><br>
-          <label for="">Cholesterol:</label>
-          <input type="text" placeholder="37.2 mg"><br><br>
+        <!-- cases -->
+        <button type="button" class="btn btn-warning mt-1" onclick="addInstruction()">Add Instruction</button>
+      </div>
+
+      <div class="container d-flex flex-column mb-4">
+        <h4>Nutrition Information</h4>
+        <form action="">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td class="fw-bold">Calories:</td>
+                <td><input type="text" class="form-control" placeholder="218.9 Kcal" id="calories"></td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Total Fat:</td>
+                <td><input type="text" class="form-control" placeholder="10.7 g" id="totalFat"></td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Protein:</td>
+                <td><input type="text" class="form-control" placeholder="7.9 g" id="protein"></td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Carbohydrate:</td>
+                <td><input type="text" class="form-control" placeholder="22.2 g" id="carbohydrate"></td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Cholesterol:</td>
+                <td><input type="text" class="form-control" placeholder="37.2 mg" id="cholesterol"></td>
+              </tr>
+            </tbody>
+          </table>
         </form>
-        </div><br>
-        <div class="container ">
-          <h4>Cooking Time:</h4>
-          <input class="form-control" type="number" placeholder="Hours 0"><br>
-          <input class="form-control" type="number" placeholder="Minutes 0">
-        </div>
+      </div>
 
-        <h6>How many portions does this recipe make?</h6>
-        <br>
-        <div class="container ">
-          <h4 class="col-2">Prep Time:</h4>
-          <input class="form-control" type="number" placeholder="Hours 0" ><br>
-          <input class="form-control" type="number" placeholder="Minutes 0">
+      <div class="container mb-4">
+        <h4>Cooking Time:</h4>
+        <div class="d-flex gap-5 col-6" id="cookingTime">
+          <input class="form-control" type="number" placeholder="Hours 0" id="cookingTimeHours">
+          <input class="form-control" type="number" placeholder="Minutes 0" id="cookingTimeMinutes">
         </div>
+      </div>
 
-        <h6>How many portions does this recipe make?</h6><br>
-        <h3>Cuisine:</h3>
-        <select class="form-select">
-          <option value="marocaine">Marocaine</option>
-          <option value="italian">Italian</option>
-          <option value="libya">Libyan</option>
-          <option value="tunisian">Tunisian</option>
-          <option value="marocaine">Marocaine</option>
-        </select><br>
-        <h3>Collection</h3>
-        <select class="form-select">
-          <option value="marocaine">Marocaine</option>
-          <option value="italian">Italian</option>
-          <option value="libya">Libyan</option>
-          <option value="tunisian">Tunisian</option>
-          <option value="marocaine">Marocaine</option>
-        </select><br><br>
-        <button type="submit" class="btn btn-warning ">Submit</button>
-      </form>
+      <div class="container mb-4">
+        <h4>Cook Time:</h4>
+        <div class="d-flex gap-5 col-6" id="cookTime">
+          <input class="form-control" type="number" placeholder="Hours 0" id="cookTimeHours">
+          <input class="form-control" type="number" placeholder="Minutes 0" id="cookTimeMinutes">
+        </div>
+      </div>
+      <button type="button" class="btn btn-warning ms-3" onclick="submitInfo()">Submit</button>
+    </form>
+  </section>
 
-    </section>
-  </div>
-  <hr>
-  <footer class="container-fluid bg-warning">
-    <div class="col justify-content-center">
-      <img src="./img/logo.png" alt="logo" class="col-md-2" width="20%">
-    </div>
-    <div class="col justify-content-center mt-3">
-      <p class="col-md-4 text-center">How many portions does this recipe make? How many portions does this recipe make?
-        How many portions does this recipe make? How many portions does this</p>
-    </div>
-    <div class="row justify-content-center mt-3">
-      <div class="col justify-content-center mt-3">
-        <div class="col-md-4">
-          <h3 class="text-center">Quick Links</h3>
-          <p>HOME</p>
-          <p>About us</p>
-          <p>Contact us</p>
+  <!-- Footer -->
+  <footer class="text-center text-lg-start text-white bg-dark">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 fw-bold">
+              <img src="./img/logo1.png" alt="" />
+              CookingRecipe
+            </h6>
+            <p>
+              Here you can use rows and columns to organize your footer
+              content. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+            <p>
+              <a class="text-white">Home</a>
+            </p>
+            <p>
+              <a class="text-white">Recipe</a>
+            </p>
+            <p>
+              <a class="text-white">Contact</a>
+            </p>
+            <p>
+              <a class="text-white">About</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+            <p>
+              <a class="text-white">Your Account</a>
+            </p>
+            <p>
+              <a class="text-white">Become an Affiliate</a>
+            </p>
+            <p>
+              <a class="text-white">Shipping Rates</a>
+            </p>
+            <p>
+              <a class="text-white">Help</a>
+            </p>
+          </div>
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+            <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
         </div>
-      </div>
-      <div class="col justify-content-center mt-3">
-        <div class="col-md-4">
-          <h3 class="text-center">LEGAL</h3>
-          <p>HOME</p>
-          <p>About us</p>
-          <p>Contact us</p>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+
+      <hr class="my-3" />
+
+      <!-- Section: Copyright -->
+      <section class="p-3 pt-0">
+        <div class="row d-flex align-items-center">
+          <!-- Grid column -->
+          <div class="col-md-7 col-lg-8 text-center text-md-start">
+            <!-- Copyright -->
+            <div class="p-3">
+              © 2020 Copyright:
+              <a class="text-white" href="#">CookingRecipe</a>
+            </div>
+            <!-- Copyright -->
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                class="fab fa-facebook-f"></i></a>
+
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                class="fab fa-twitter"></i></a>
+
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                class="fab fa-google"></i></a>
+
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                class="fab fa-instagram"></i></a>
+          </div>
+          <!-- Grid column -->
         </div>
-      </div>
-      <div class="col justify-content-center mt-3">
-        <div class="col-md-4">
-          <h3 class="text-center">NewsLetter</h3>
-          <p class="text-center">Subscribe to our newsletter to get more free tips</p>
-          <input type="email" class="form-control mb-2" placeholder="Enter your email">
-          <button class="btn btn-warning btn-block">Subscribe</button>
-        </div>
-      </div>
+      </section>
+      <!-- Section: Copyright -->
     </div>
-    <hr>
-    <div class="col justify-content-center mt-3">
-      <div class="col-md-4">
-        <p class="text-center">@2024copyrithcookingcopyrithcooking</p>
-        <div class="d-flex justify-content">
-          <img src="./img/facebook.png" alt="" width="20%">
-          <img src="./img/youtube.png" alt="" width="20%">
-          <img src="./img/instagram.png" alt="" width="20%">
-          <img src="./img/linkedin.png" alt="" width="20%">
-        </div>
-      </div>
-    </div>
+    <!-- Grid container -->
   </footer>
 
-  <!-- <footer class="container-fluid bg-warning ">
-    <img src="" alt="logo" class="col-md-4">
-    <p class="col-md-4">how many portions does this recipe make ?
-      how many portions does this recipe make ?
-      how many portions does this recipe make ?
-      how many portions does this</p>
-    <div class="container ">
-      <h3 class="col-md-8 text text-center">Quick Links</h3>
-      <p>HOME</p><br>
-      <p>About us</p><br>
-      <p>Contact us</p><br>
-      <h3 class="col-md-8 text text-center">Quick Links</h3>
-      <p>Termes of use</p><br>
-      <p>Termes of use</p><br>
-      <p>Termes of use</p><br>
-      <h3 class="col-md-8 text text-center">Legal</h3>
-      <p>Termes of use</p><br>
-      <p>Termes of use</p><br>
-      <p>Termes of use</p><br>
-      <h3>NewsLetter</h3><br>
-    </div>
-    <p>subscribe to our newsletter to get more free tip</p>
-    <input type="email" placeholder="Ener your email">
-    <button class="btn btn-warning">Subscribe</button><br>
-    <hr>
-    <div>
-      <p>@2024copyrithcookinghow many portions does this </p>
-      <img src="./img/facebook.png" alt="">
-      <img src="./img/youtube.png" alt="">
-      <img src="./img/instagram.png" alt="">
-      <img src="./img/linkedin.png" alt="">
-      <img src="./img/twitter.png" alt="">
-    </div>
-
-
-  </footer> -->
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
