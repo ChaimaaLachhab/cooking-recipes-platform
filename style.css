@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+<<<<<<< HEAD
 
 /* Global styles */
 * {
@@ -47,12 +48,63 @@ body {
 .card:hover {
     transform: translateY(-5px);
 }
+=======
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+p a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+  
+.navbar {
+    background-color: #343a40 !important;
+}
+  
+.navbar-brand {
+    color: #fff;
+}
+
+.navbar-brand:hover{
+    color: orange;
+}
+  
+.navbar-nav .nav-link {
+    color: #fff;
+}
+  
+.navbar-nav .nav-link:hover {
+    color: orange !important;
+}
+  
+.card {
+    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+    border-radius: 10px !important;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+>>>>>>> ajouter
   
 .card-img-top {
     border-radius: 10px 10px 0 0;
     height: 300px;
     object-fit: cover;
     transition: transform 0.3s ease;
+<<<<<<< HEAD
 }
   
 .card-title {
@@ -60,6 +112,37 @@ body {
     font-weight: bold;
 }
   
+=======
+}
+
+.btn-warning {
+    background-color: orange;
+    border-radius: 10px;
+}
+
+.cadr {
+    border: solid;
+    margin: 100px;
+    color: #333;
+    border-radius: 10px;
+    
+}
+
+#cal {
+    background-color: rgb(251, 247, 239);
+    border: solid;
+    border-radius: 10px;
+    border-color: rgb(255, 166, 0);
+    height: 360px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2); /* Added units to the box-shadow */
+}
+  
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+  
+>>>>>>> ajouter
 .card-text {
     color: #666;
 }
