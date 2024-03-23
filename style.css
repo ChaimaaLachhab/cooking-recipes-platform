@@ -19,6 +19,9 @@
     width: 50px;
     
 }
+.btn-warning{
+    background-color: rgb(240, 201, 4);
+}
 #cal{
     background-color:rgb(251, 247, 239);
     border: solid;
