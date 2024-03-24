@@ -11,7 +11,22 @@ p a{
     text-decoration: none;
 }
 
-h6 img{
-    width: 50px;
-    margin-right: 10px;
+.card{
+    width: 25rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px !important;
+    border: 3px solid gainsboro !important;
+}
+
+.nav-item:hover{
+    width:min-content;
+    border-bottom: 2px solid orange;
+    color: orange !important;
+}
+
+.card-img-top{
+    border-radius: 10px 10px 0px 0px;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
 }
