@@ -39,124 +39,126 @@
       </div>
     </div>
   </nav>
-
-  <section class="container flex-column col-md-6 col-sm-11 mt-5">
-    <div>
-      <h4>Recipe Title:</h4>
-      <input class="form-control mb-4" type="text" placeholder="Enter Title" id="title">
-    </div>
-    <div class="mb-4">
-      <h4>Category:</h4>
-      <select class="form-select" id="category">
-        <option value="marocaine">Marocaine</option>
-        <option value="italian">Italian</option>
-        <option value="libya">Libyan</option>
-        <option value="tunisian">Tunisian</option>
-        <option value="marocaine">Marocaine</option>
-      </select>
-    </div>
-
-    <div class="mb-4">
-      <h4>Author Photo:</h4>
-      <div class="mb-4 d-flex align-items-center" id="addAuthorPhoto">
-        <div class="btn1 btn-rounded position-relative ms-5">
-          <input type="file" class="form-control visually-hidden" id="customFileAuthor"
-            onchange="displaySelectedAuthorPhoto(event)">
-          <label class="form-label m-1" for="customFileAuthor">
-            <img class="m-1" width="50px" src="./img/add-photo.png" alt="Add Photo">
-          </label>
-        </div>
-        <img id="selectedAuthorPhoto" class="me-5" width="20%" src="">
-        <input type="text" class="form-control mb-2 h-75" id="authorName" placeholder="Author Name">
+  <div class="cadr">
+    <section class="container flex-column col-md-6 col-sm-11 mt-5">
+      <div>
+        <h4>Recipe Title:</h4>
+        <input class="form-control mb-4" type="text" placeholder="Enter Title" id="title">
       </div>
-    </div>
-
-    <div class="mb-4">
-      <h4>Recipe Image:</h4>
-      <div class="mb-4 d-flex flex-column justify-content-center align-items-center" id="add">
-        <div class="btn2 btn-rounded position-relative">
-          <input type="file" class="form-control visually-hidden" id="customFile1"
-            onchange="displaySelectedImage(event)">
-          <label class="form-label m-1" for="customFile1">
-            <img class="m-1" width="50px" src="./img/add-photo.png" alt="Add Photo">
-          </label>
-        </div>
-        <img id="selectedImage" class="m-1" width="20%" src="">
-      </div>
-    </div>
-  </section>
-
-  <section class="container flex-column col-md-6 col-sm-12 mb-5">
-    <form action="">
       <div class="mb-4">
-        <h4>Description:</h4>
-        <div class="form-floating">
-          <textarea class="form-control" placeholder="Leave a comment here" id="description"
-            style="height: 100px"></textarea>
-          <label for="description">Comments</label>
+        <h4>Category:</h4>
+        <select class="form-select" id="category">
+          <option value="marocaine">Marocaine</option>
+          <option value="italian">Italian</option>
+          <option value="libya">Libyan</option>
+          <option value="tunisian">Tunisian</option>
+          <option value="marocaine">Marocaine</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <h4>Author Photo:</h4>
+        <div class="mb-4 d-flex align-items-center" id="addAuthorPhoto">
+          <div class="btn1 btn-rounded position-relative ms-5">
+            <input type="file" class="form-control visually-hidden" id="customFileAuthor"
+              onchange="displaySelectedAuthorPhoto(event)">
+            <label class="form-label m-1" for="customFileAuthor">
+              <img class="m-1" width="50px" src="./img/add-photo.png" alt="Add Photo">
+            </label>
+          </div>
+          <img id="selectedAuthorPhoto" class="me-5" width="20%" src="">
+          <input type="text" class="form-control mb-2 h-75" id="authorName" placeholder="Author Name">
         </div>
       </div>
 
-      <div id="ingredientsContainer" class="mb-4">
-        <h4>Ingredients:</h4>
-        <!-- cases -->
-        <button type="button" class="btn btn-warning mt-1" onclick="addIngredient()">Add Ingredient</button>
-      </div>
-
-      <div id="instructionsContainer" class="mb-4">
-        <h4>Instruction:</h4>
-        <!-- cases -->
-        <button type="button" class="btn btn-warning mt-1" onclick="addInstruction()">Add Instruction</button>
-      </div>
-
-      <div class="container d-flex flex-column mb-4">
-        <h4>Nutrition Information</h4>
-        <form action="">
-          <table class="table">
-            <tbody>
-              <tr>
-                <td class="fw-bold">Calories:</td>
-                <td><input type="text" class="form-control" placeholder="218.9 Kcal" id="calories"></td>
-              </tr>
-              <tr>
-                <td class="fw-bold">Total Fat:</td>
-                <td><input type="text" class="form-control" placeholder="10.7 g" id="totalFat"></td>
-              </tr>
-              <tr>
-                <td class="fw-bold">Protein:</td>
-                <td><input type="text" class="form-control" placeholder="7.9 g" id="protein"></td>
-              </tr>
-              <tr>
-                <td class="fw-bold">Carbohydrate:</td>
-                <td><input type="text" class="form-control" placeholder="22.2 g" id="carbohydrate"></td>
-              </tr>
-              <tr>
-                <td class="fw-bold">Cholesterol:</td>
-                <td><input type="text" class="form-control" placeholder="37.2 mg" id="cholesterol"></td>
-              </tr>
-            </tbody>
-          </table>
-        </form>
-      </div>
-
-      <div class="container mb-4">
-        <h4>Cooking Time:</h4>
-        <div class="d-flex gap-5 col-6" id="cookingTime">
-          <input class="form-control" type="number" placeholder="Hours 0" id="cookingTimeHours">
-          <input class="form-control" type="number" placeholder="Minutes 0" id="cookingTimeMinutes">
+      <div class="mb-4">
+        <h4>Recipe Image:</h4>
+        <div class="mb-4 d-flex flex-column justify-content-center align-items-center" id="add">
+          <div class="btn2 btn-rounded position-relative">
+            <input type="file" class="form-control visually-hidden" id="customFile1"
+              onchange="displaySelectedImage(event)">
+            <label class="form-label m-1" for="customFile1">
+              <img class="m-1" width="50px" src="./img/add-photo.png" alt="Add Photo">
+            </label>
+          </div>
+          <img id="selectedImage" class="m-1" width="20%" src="">
         </div>
       </div>
+    </section>
 
-      <div class="container mb-4">
-        <h4>Cook Time:</h4>
-        <div class="d-flex gap-5 col-6" id="cookTime">
-          <input class="form-control" type="number" placeholder="Hours 0" id="cookTimeHours">
-          <input class="form-control" type="number" placeholder="Minutes 0" id="cookTimeMinutes">
+    <section class="container flex-column col-md-6 col-sm-12 mb-5">
+      <form action="">
+        <div class="mb-4">
+          <h4>Description:</h4>
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="description"
+              style="height: 100px"></textarea>
+            <label for="description">Comments</label>
+          </div>
         </div>
-      </div>
-      <button type="button" class="btn btn-warning ms-3" onclick="submitInfo()">Submit</button>
-    </form>
-  </section>
+
+        <div id="ingredientsContainer" class="mb-4">
+          <h4>Ingredients:</h4>
+          <!-- cases -->
+          <button type="button" class="btn btn-warning mt-1" onclick="addIngredient()">Add Ingredient</button>
+        </div>
+
+        <div id="instructionsContainer" class="mb-4">
+          <h4>Instruction:</h4>
+          <!-- cases -->
+          <button type="button" class="btn btn-warning mt-1" onclick="addInstruction()">Add Instruction</button>
+        </div>
+
+        <div class="container d-flex flex-column mb-4 btn-warning">
+          <h4>Nutrition Information</h4>
+
+          <form action="">
+            <table class="table ">
+              <tbody>
+                <tr>
+                  <td class="fw-bold">Calories:</td>
+                  <td><input type="text" class="form-control" placeholder="218.9 Kcal" id="calories"></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Total Fat:</td>
+                  <td><input type="text" class="form-control" placeholder="10.7 g" id="totalFat"></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Protein:</td>
+                  <td><input type="text" class="form-control" placeholder="7.9 g" id="protein"></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Carbohydrate:</td>
+                  <td><input type="text" class="form-control" placeholder="22.2 g" id="carbohydrate"></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">Cholesterol:</td>
+                  <td><input type="text" class="form-control" placeholder="37.2 mg" id="cholesterol"></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+
+        <div class="container mb-4">
+          <h4>Cooking Time:</h4>
+          <div class="d-flex gap-5 col-6" id="cookingTime">
+            <input class="form-control" type="number" placeholder="Hours 0" id="cookingTimeHours">
+            <input class="form-control" type="number" placeholder="Minutes 0" id="cookingTimeMinutes">
+          </div>
+        </div>
+
+        <div class="container mb-4">
+          <h4>Cook Time:</h4>
+          <div class="d-flex gap-5 col-6" id="cookTime">
+            <input class="form-control" type="number" placeholder="Hours 0" id="cookTimeHours">
+            <input class="form-control" type="number" placeholder="Minutes 0" id="cookTimeMinutes">
+          </div>
+        </div>
+        <button type="button" class="btn btn-warning ms-3" onclick="submitInfo()">Submit</button>
+      </form>
+    </section>
+  </div>
 
   <!-- Footer -->
   <footer class="text-center text-lg-start text-white bg-dark">
@@ -186,16 +188,16 @@
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
             <p>
-              <a class="text-white">Home</a>
+              <a class="text-white" href="home.html">Home</a>
             </p>
             <p>
-              <a class="text-white">Recipe</a>
+              <a class="text-white" href="recipe.html">Recipe</a>
             </p>
             <p>
-              <a class="text-white">Contact</a>
+              <a class="text-white" href="contact.html">Contact</a>
             </p>
             <p>
-              <a class="text-white">About</a>
+              <a class="text-white" href="about.html">About</a>
             </p>
           </div>
           <!-- Grid column -->
