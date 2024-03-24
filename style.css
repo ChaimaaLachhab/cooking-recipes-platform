@@ -1,32 +1,32 @@
-.star-rating {
-    line-height:32px;
-    font-size:1.25em;
-  }
-  
-.star-rating .fa-star{color: orange;}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 
-#add{
-    background-color: rgb(255, 255, 255);
-    border: solid;
-    border-radius: 10px;
-    border-color: rgba(0, 0, 0, 0.426);
-    height:300px;
-    width: 400px;
-    align-items: center;
+p a{
+    text-decoration: none;
 }
-#img1{
-    width: 50px;
-    
+
+.card{
+    width: 25rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px !important;
+    border: 3px solid gainsboro !important;
 }
-#cal{
-    background-color:rgb(251, 247, 239);
-    border: solid;
-    border-radius: 10px;
-    border-color: rgb(255, 166, 0);
-    height:360px;
-    box-shadow: 20px;
+
+.nav-item:hover{
+    width:min-content;
+    border-bottom: 2px solid orange;
+    color: orange !important;
 }
-#ingredientsContainer input {
-    margin-bottom: 10px;
+
+.card-img-top{
+    border-radius: 10px 10px 0px 0px;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
 }
