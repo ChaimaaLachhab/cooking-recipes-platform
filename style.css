@@ -236,3 +236,44 @@ footer a:hover {
 }
 
 .star-rating .fa-star{color: yellow;}
+
+/* :::::::::::::::::::::::::::::::::::::::::::::: */
+/* start detail recipe */
+
+.star-rating {
+    line-height:32px;
+    font-size:1.25em;
+  }
+  
+.star-rating .fa-star{color: orange;}
+
+
+#selectedImage {
+    max-height: 650px;
+    min-height: 650px;
+}
+
+/* Image Sizes for Different Devices */
+.col-md-4 img {
+    width: 40px; 
+}
+
+@media screen and (max-width: 480px) {
+    #selectedImage {
+        max-height: 300px; 
+        min-height: 300px;
+    }
+    .col-md-4 img {
+        width: 25px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 480px) {
+    #selectedImage {
+        max-height: 650px; 
+        min-height: 650px;
+    }
+    .col-md-4 img {
+        width: 40px; 
+    }
+}

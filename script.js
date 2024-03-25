@@ -44,6 +44,7 @@ function changeActivePosition(activeItem){
     }
     activeItem.classList.add('active');
 };
+
 // rating 
 var $star_rating = $('.star-rating .fa');
 
@@ -67,8 +68,7 @@ $(document).ready(function() {
 
 });
 
-// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-// START ADD RECIPE
+//=================== Start Add Recipe ===================/
 
 function displaySelectedAuthorPhoto(event) {
   const selectedFile = event.target.files[0];
@@ -100,6 +100,13 @@ function displaySelectedImage(event) {
 
 let recipes = [];
 
+window.onload = function() {
+  let storedRecipes = localStorage.getItem('recipes');
+  if (storedRecipes) {
+    recipes = JSON.parse(storedRecipes);
+  }
+};
+
 function addInstruction() {
   let instructionInput = document.createElement("textarea");
   instructionInput.setAttribute("class", "form-control mb-1 instruction-input");
@@ -119,12 +126,18 @@ function addIngredient() {
   ingredientInput.setAttribute("class", "form-control mb-1 ingredient-input");
   ingredientInput.setAttribute("placeholder", "Enter Ingredient");
 
+<<<<<<< HEAD
   let ingredientsContainer = document.getElementById("ingredientsContainer");
 
   ingredientsContainer.insertBefore(
     ingredientInput,
     ingredientsContainer.querySelector("button")
   );
+=======
+  let ingredientsContainer = document.getElementById('ingredientsContainer');
+
+  ingredientsContainer.insertBefore(ingredientInput, ingredientsContainer.querySelector('button'));
+>>>>>>> 140bde8d36d7eb16ce6fd8d1a945ad5dbae3d5a5
 }
 
 function submitInfo() {
@@ -184,6 +197,7 @@ function submitInfo() {
     instructions: instructions,
   };
 
+<<<<<<< HEAD
   if (localStorage.getItem("recipes")) {
     recipes = JSON.parse(localStorage.getItem("recipes"));
     recipes.push(recipe);
@@ -192,6 +206,12 @@ function submitInfo() {
     recipes.push(recipe);
     localStorage.setItem("recipes", JSON.stringify(recipes));
   }
+=======
+  recipes.push(recipe);
+
+  localStorage.setItem('recipes', JSON.stringify(recipes));
+
+>>>>>>> 140bde8d36d7eb16ce6fd8d1a945ad5dbae3d5a5
   resetForm();
   alert("Recipe added successfully!");
 }
@@ -220,6 +240,7 @@ function resetForm() {
     input.parentNode.removeChild(input);
   });
 
+<<<<<<< HEAD
   let instructionInputs = document.querySelectorAll(".instruction-input");
   instructionInputs.forEach((input) => {
     input.parentNode.removeChild(input);
@@ -261,11 +282,75 @@ function displayRecipeCards() {
   }
 }
 
+=======
+let instructionInputs = document.querySelectorAll('.instruction-input');
+instructionInputs.forEach(input => {
+input.parentNode.removeChild(input);
+});
+}
+//=================== End Add Recipe ===================/
+
+//=================== Start Recipe Details ===================/
+
+function displayRecipeDetails(index) {
+  const recipes = JSON.parse(localStorage.getItem("recipes"));
+
+  if (recipes && recipes.length > index) {
+    localStorage.setItem("selectedRecipeIndex", index);
+    window.location.href = "dt-recipe.html";
+  } else {
+    console.log("Recipe not found in localStorage.");
+  }
+}
+//=================== End Recipe Details ===================/
+
+//=================== Start Recipe ===================/
+// Assurez-vous que le DOM est chargé avant d'exécuter le script
+document.addEventListener("DOMContentLoaded", function() {
+  displayRecipeCards();
+});
+
+function displayRecipeCards() {
+  const recipes = JSON.parse(localStorage.getItem("recipes"));
+
+  if (recipes && recipes.length > 0) {
+      const cardContainer = document.querySelector("#recipeContainer");
+
+      if (cardContainer) {
+          recipes.forEach((recipe, index) => {
+              const card = document.createElement("div");
+              card.classList.add("col");
+              card.innerHTML =`
+                  <div class="card">
+                      <img src="${recipe.recipeImage}" class="card-img-top" alt="${recipe.title}">
+                      <div class="card-body">
+                          <div class="d-flex justify-content-between">
+                              <h5 class="card-title">${recipe.title}</h5>
+                              <div class="text-warning text-center">${generateStars(recipe.nutritionInformation.rating || 0)}</div>
+                          </div>
+                          <p class="card-text">${recipe.description}</p>
+                          <button class="btn btn-dark view-details-btn" onclick="displayRecipeDetails(${index})">View Details</button>
+                      </div>
+                  </div>
+                  `;
+              cardContainer.appendChild(card);
+          });
+      } else {
+          console.log("Card container not found.");
+      }
+  } else {
+      console.log("No recipes found in localStorage.");
+  }
+}
+
+
+>>>>>>> 140bde8d36d7eb16ce6fd8d1a945ad5dbae3d5a5
 function generateStars(rating) {
   let stars = "";
   for (let i = 0; i < rating; i++) {
     stars += '<i class="fa fa-star"></i>';
   }
+<<<<<<< HEAD
   for (let i = rating; i < 5; i++) {
     stars += '<i class="fa fa-star-o"></i>';
   }
@@ -274,3 +359,10 @@ function generateStars(rating) {
 
 displayRecipeCards();
 /*=================== End Recipe ===================*/
+=======
+  return stars;
+}
+
+
+//=================== End Recipe ===================/
+>>>>>>> 140bde8d36d7eb16ce6fd8d1a945ad5dbae3d5a5
