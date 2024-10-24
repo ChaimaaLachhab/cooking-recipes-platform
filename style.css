@@ -1,279 +1,291 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Global styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 p a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-}
-  
-.navbar {
-    background-color: #343a40 !important;
-}
-  
-.navbar-brand {
-    color: #fff;
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
-.navbar-brand:hover{
-    color: orange;
+.navbar {
+  background-color: #343a40 !important;
 }
-  
+
+.navbar-brand {
+  color: #fff;
+}
+
+.navbar-brand:hover {
+  color: orange;
+}
+
 .navbar-nav .nav-link {
-    color: #fff;
+  color: #fff;
 }
-  
+
 .navbar-nav .nav-link:hover {
-    color: orange !important;
+  color: orange !important;
 }
-  
+
 .card {
-    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
-    border-radius: 10px !important;
-    transition: transform 0.3s ease;
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+  border-radius: 10px !important;
+  transition: transform 0.3s ease;
+  min-width: 100%;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
-
 
 /* Global styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 p a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-}
-  
-.navbar {
-    background-color: #343a40 !important;
-}
-  
-.navbar-brand {
-    color: #fff;
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+  color: #000000;
 }
 
-.navbar-brand:hover{
-    color: orange;
+.navbar {
+  background-color: #343a40 !important;
 }
-  
+
+.navbar-brand {
+  color: #fff;
+}
+
+.navbar-brand:hover {
+  color: orange;
+}
+
 .navbar-nav .nav-link {
-    color: #fff;
+  color: #fff;
 }
-  
+
 .navbar-nav .nav-link:hover {
-    color: orange !important;
+  color: orange !important;
 }
-  
+
 .card {
-    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
-    border-radius: 10px !important;
-    transition: transform 0.3s ease;
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+  border-radius: 10px !important;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
-  
 .card-img-top {
-    border-radius: 10px 10px 0 0;
-    height: 300px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+  border-radius: 10px 10px 0 0;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
 
 .card-text {
-    color: #666;
+  color: #666;
 }
-  
+
 a.btn-dark {
-    color: #343a40 !important;
-    background-color: white !important;
+  color: #343a40 !important;
+  background-color: white !important;
+}
+
+.globalBgColor{
+  background-color: #ffcead;
 }
 
 /* Footer styles */
 footer {
-    background-color: #343a40;
-    color: #fff;
+  background-color: #343a40;
+  color: #fff;
 }
 
 footer a {
-    color: #fff;
+  color: #fff;
 }
 
 footer a:hover {
-    color: orange;
+  color: orange;
 }
 
 /*************home style*************/
 
-.post-img img{
-    width: 100%;
+.post-img img {
+  width: 100%;
 }
 
 /****************/
-.main-container{
-    width: 90vw;
-    margin: 0 auto;
-    padding: 40px 0;
-}
-.main-container > h2{
-    text-align:left;
-    padding: 10px 0;
-    font-size: 32px;
-    color: rgb(234, 79, 23);
+.main-container {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 40px 0;
 }
 
-.category-head{
-    margin: 30px 0;
-}
-.category-head ul{
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-.category-title{
-    flex: 0 0 calc(16.6667% - 10px);
-    display: flex;
-    justify-content:center;
-    background: #e4dd06;
-    padding: 12px;
-    color: #fff;
-    margin: 5px;
-    cursor: pointer;
-    transition: all 0.4s ease;
-}
-.category-title:hover{
-    opacity: 0.7;
-}
-.category-title li{
-    padding: 0 10px;
+.main-container > h2 {
+  text-align: left;
+  padding: 10px 0;
+  font-size: 32px;
+  color: rgb(234, 79, 23);
 }
 
+.category-head {
+  margin: 30px 0;
+}
+
+.category-head ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  
+}
+
+.category-title {
+  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: #ffcead;
+  padding: 12px;
+  color: #fff;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.category-title:hover {
+  opacity: 0.7;
+}
+
+.category-title li {
+  padding: 0 10px;
+}
 
 /** single post **/
-.posts-main-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
-}
-.posts-main-container > div{
-    box-shadow: 0px 8px 22px -12px rgba(0, 0, 0, 0.64);
-}
-.post-img{
-    position: relative;
+.posts-main-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
 }
 
-.post-content{
-    padding: 25px;
-}
-.post-content-top{
-    background: #80ced7;
-    color: #fff;
-    opacity: 0.8;
-    padding: 5px 0 5px 15px;
-}
-.post-content-top span{
-    padding-right: 20px;
+.posts-main-container > div {
+  box-shadow: 0px 8px 22px -12px rgba(0, 0, 0, 0.64);
 }
 
-.post-content h2{
-    font-size: 22px;
-    padding: 12px 0;
-    font-weight: 400;
-}
-.post-content p{
-    opacity: 0.7;
-    font-size: 15px;
-    line-height: 1.8;
+.post-img {
+  position: relative;
 }
 
-/***************/
-@media(max-width: 1170px){
-    .posts-main-container{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media(max-width: 768px){
-    .posts-main-container{
-        grid-template-columns: 1fr;
-    }
+.post-content {
+  padding: 25px;
 }
 
-
-/***********/
-
-.active{
-    background: #db7d30;
+.post-content-top {
+  background: #80ced7;
+  color: #fff;
+  opacity: 0.8;
+  padding: 5px 0 5px 15px;
 }
 
-.star-rating {
-  line-height:32px;
-  font-size:1.25em;
+.post-content-top span {
+  padding-right: 20px;
 }
 
-.star-rating .fa-star{color: yellow;}
+.post-content h2 {
+  font-size: 22px;
+  padding: 12px 0;
+  font-weight: 400;
+}
+
+.post-content p {
+  opacity: 0.7;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+@media (max-width: 1170px) {
+  .posts-main-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .posts-main-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.active {
+  color: #db7d30 !important;
+}
 
 /* :::::::::::::::::::::::::::::::::::::::::::::: */
 /* start detail recipe */
+.bgCard {
+  background-color: #ffcead;
+}
 
 .star-rating {
-    line-height:32px;
-    font-size:1.25em;
-  }
-  
-.star-rating .fa-star{color: orange;}
+  line-height: 32px;
+  font-size: 1.25em;
+}
 
+.star-rating .fa-star {
+  color: orange;
+}
 
-#selectedImage {
-    max-height: 650px;
-    min-height: 650px;
+.selectedImg {
+  object-fit: cover;
 }
 
 /* Image Sizes for Different Devices */
 .col-md-4 img {
-    width: 40px; 
+  width: 40px;
 }
 
 @media screen and (max-width: 480px) {
-    #selectedImage {
-        max-height: 300px; 
+    .selectedImg {
+        max-height: 300px;
         min-height: 300px;
     }
+
     .col-md-4 img {
         width: 25px;
     }
 }
 
-@media screen and (max-width: 1024px) and (min-width: 480px) {
-    #selectedImage {
-        max-height: 650px; 
+  @media screen and (max-width: 4000px) and (min-width: 480px) {
+    .selectedImg {
+        max-height: 650px;
         min-height: 650px;
     }
+
     .col-md-4 img {
-        width: 40px; 
+        width: 40px;
     }
-}
+} 
+

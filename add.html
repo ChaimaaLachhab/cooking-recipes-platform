@@ -4,41 +4,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <title>Add Recipe</title>
+  <title>Recipe App</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- CSS -->
+  <link href="./style.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand fs-3 fw-bold text-white" href="#">
-        <img src="./img/logo1.png" class="img-fluid" alt="" />
+  <!-- Start Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex align-items-center justify-content-between py-3">
+    <div class="container">
+      <a class="navbar-brand text-uppercase fw-bold fs-5" href="./recipe.html">
+        <img src="./img/logo1.png" width="40px" class="img-fluid" alt="Logo" />
         CookingRecipes
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav fs-5 ms-auto">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav align-items-center fs-5">
           <li class="nav-item">
-            <a class="nav-link text-white active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="./home.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">Recipe</a>
+            <a class="nav-link" href="./recipe.html">Recipe</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">Contact</a>
+            <a class="nav-link active" href="./add.html">Add Recipe</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">About</a>
+            <a class="nav-link btn btn-dark ms-2 fw-semibold px-4" href="#">Login</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+  <!-- End Navbar -->
   <div class="cadr">
     <section class="container flex-column col-md-6 col-sm-11 mt-5">
       <div>
@@ -100,13 +105,13 @@
         <div id="ingredientsContainer" class="mb-4">
           <h4>Ingredients:</h4>
           <!-- cases -->
-          <button type="button" class="btn btn-warning mt-1" onclick="addIngredient()">Add Ingredient</button>
+          <button type="button" class="btn globalBgColor mt-1" onclick="addIngredient()">Add Ingredient</button>
         </div>
 
         <div id="instructionsContainer" class="mb-4">
           <h4>Instruction:</h4>
           <!-- cases -->
-          <button type="button" class="btn btn-warning mt-1" onclick="addInstruction()">Add Instruction</button>
+          <button type="button" class="btn globalBgColor mt-1" onclick="addInstruction()">Add Instruction</button>
         </div>
 
         <div class="container d-flex flex-column mb-4 btn-warning">
@@ -155,23 +160,19 @@
             <input class="form-control" type="number" placeholder="Minutes 0" id="cookTimeMinutes">
           </div>
         </div>
-        <button type="button" class="btn btn-warning ms-3" onclick="submitInfo()">Submit</button>
+        <button type="button" class="btn globalBgColor ms-3" onclick="submitInfo()">Submit</button>
       </form>
     </section>
   </div>
 
   <!-- Footer -->
   <footer class="text-center text-lg-start text-white bg-dark">
-    <!-- Grid container -->
-    <div class="container p-4 pb-0">
-      <!-- Section: Links -->
-      <section class="">
-        <!--Grid row-->
+    <div class="container p-4">
+      <section>
         <div class="row">
-          <!-- Grid column -->
           <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 fw-bold">
-              <img src="./img/logo1.png" alt="" />
+            <h6 class="text-uppercase mb-4 fw-bold fs-5">
+              <img src="./img/logo1.png" class="me-1" width="70px" alt="logo" />
               CookingRecipe
             </h6>
             <p>
@@ -180,51 +181,36 @@
               elit.
             </p>
           </div>
-          <!-- Grid column -->
-
-          <hr class="w-100 clearfix d-md-none" />
-
-          <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
             <p>
-              <a class="text-white" href="home.html">Home</a>
+              <a class="text-white nav-link" href="#">Home</a>
             </p>
             <p>
-              <a class="text-white" href="recipe.html">Recipe</a>
+              <a class="text-white nav-link" href="#">Recipe</a>
             </p>
             <p>
-              <a class="text-white" href="contact.html">Contact</a>
+              <a class="text-white nav-link" href="#">Contact</a>
             </p>
             <p>
-              <a class="text-white" href="about.html">About</a>
+              <a class="text-white nav-link" href="#">About</a>
             </p>
           </div>
-          <!-- Grid column -->
-
-          <hr class="w-100 clearfix d-md-none" />
-
-          <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
             <p>
-              <a class="text-white">Your Account</a>
+              <a class="text-white nav-link" href="#">Your Account</a>
             </p>
             <p>
-              <a class="text-white">Become an Affiliate</a>
+              <a class="text-white nav-link" href="#">Become an Affiliate</a>
             </p>
             <p>
-              <a class="text-white">Shipping Rates</a>
+              <a class="text-white nav-link" href="#">Shipping Rates</a>
             </p>
             <p>
-              <a class="text-white">Help</a>
+              <a class="text-white nav-link" href="#">Help</a>
             </p>
           </div>
-
-          <!-- Grid column -->
-          <hr class="w-100 clearfix d-md-none" />
-
-          <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
             <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
@@ -232,58 +218,37 @@
             <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
             <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
           </div>
-          <!-- Grid column -->
         </div>
-        <!--Grid row-->
       </section>
-      <!-- Section: Links -->
-
       <hr class="my-3" />
-
-      <!-- Section: Copyright -->
       <section class="p-3 pt-0">
         <div class="row d-flex align-items-center">
-          <!-- Grid column -->
           <div class="col-md-7 col-lg-8 text-center text-md-start">
-            <!-- Copyright -->
             <div class="p-3">
-              © 2020 Copyright:
+              Â© 2024 Copyright:
               <a class="text-white" href="#">CookingRecipe</a>
             </div>
-            <!-- Copyright -->
           </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
           <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-            <!-- Facebook -->
-            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+            <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i
                 class="fab fa-facebook-f"></i></a>
-
-            <!-- Twitter -->
-            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
-                class="fab fa-twitter"></i></a>
-
-            <!-- Google -->
-            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
-                class="fab fa-google"></i></a>
-
-            <!-- Instagram -->
-            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+            <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i class="fab fa-google"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i
                 class="fab fa-instagram"></i></a>
           </div>
-          <!-- Grid column -->
         </div>
       </section>
-      <!-- Section: Copyright -->
     </div>
-    <!-- Grid container -->
+    </div>
   </footer>
 
-  <script src="./script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
+  <!-- Jquery Js -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -13,10 +13,10 @@
 </head>
 
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container p-2">
-            <a class="navbar-brand fs-4 fw-semibold text-white" href="#">
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex align-items-center justify-content-between py-3">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-bold fs-5" href="./recipe.html">
                 <img src="./img/logo1.png" width="40px" class="img-fluid" alt="Logo" />
                 CookingRecipes
             </a>
@@ -24,25 +24,25 @@
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav fs-5 ms-auto me-5">
-                    <li class="nav-item pe-2">
-                        <a class="nav-link text-white" aria-current="page" href="home.html">Home</a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav align-items-center fs-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./home.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white active" href="recipe.html">Recipe</a>
+                        <a class="nav-link active" href="./recipe.html">Recipe</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="add.html">Add recipe</a>
+                        <a class="nav-link" href="./add.html">Add Recipe</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">About</a>
+                        <a class="nav-link btn btn-dark ms-2 fw-semibold px-4" href="#">Login</a>
                     </li>
                 </ul>
-                <button class="btn btn-light fw-semibold fs-5">Login</button>
             </div>
         </div>
     </nav>
+    <!-- End Navbar -->
 
     <div class="container mt-4">
         <!-- title -->
@@ -81,18 +81,18 @@
 
         <div class="row">
             <!-- image de recipe -->
-            <div class="col-md-7 mb-4">
+            <div class="col-md-8 mb-4">
                 <div class="d-flex align-items-center min-width-100">
-                    <img id="selectedImage" src="" alt="Photo" class="img-fluid border-danger-subtle rounded-4 w-100">
+                    <img id="selectedImage" src="" alt="Photo" class="img-fluid border-danger-subtle rounded-4 w-100 selectedImg">
                 </div>
             </div>
-            <div class="col-md-5 mb-4">
+            <div class="col-md-4 mb-4">
                 <!-- Nutrition Information -->
-                <div class="bg-warning p-3 rounded-4">
+                <div class="bgCard p-3 rounded-4">
                     <!-- Author Info -->
-                    <div class="d-flex align-items-center gap- mb-4 p-3">
+                    <div class="d-flex align-items-center gap-3 mb-1 p-3" style="width: 100%;">
                         <!-- photo -->
-                        <img id="selectedAuthorPhoto" src="" alt="Photo" width="90" height="90"
+                        <img id="selectedAuthorPhoto" src="" alt="Photo" width="90" height="90" style="width: auto;"
                             class="rounded-circle me-2">
                         <!-- name  -->
                         <p class="me-md-5 mt-3 fs-6" id="authorName"></p>
@@ -125,15 +125,15 @@
                     </div>
                 </div>
                 <!-- Rate the Recipe -->
-                <div class="mt-3 p-3 rounded">
-                    <h5 class="fw-bold me-4 fs-7">Rate the recipe </h5>
+                <div id="ratingSection" class="container p-4 flex flex-col justify-content-center align-items-center">
+                    <h4 class="fw-bold mb-3 mt-2 fs-7">Rate the recipe</h4>
                     <div class="star-rating d-flex justify-content-center gap-3 p-2">
-                        <span class="fa fa-star-o display-6" data-rating="1"></span>
-                        <span class="fa fa-star-o display-6" data-rating="2"></span>
-                        <span class="fa fa-star-o display-6" data-rating="3"></span>
-                        <span class="fa fa-star-o display-6" data-rating="4"></span>
-                        <span class="fa fa-star-o display-6" data-rating="5"></span>
-                        <input type="hidden" name="whatever1" class="rating-value" value="2.56">
+                        <span class="fa fa-star-o display-6 disabled" data-rating="1"></span>
+                        <span class="fa fa-star-o display-6 disabled" data-rating="2"></span>
+                        <span class="fa fa-star-o display-6 disabled" data-rating="3"></span>
+                        <span class="fa fa-star-o display-6 disabled" data-rating="4"></span>
+                        <span class="fa fa-star-o display-6 disabled" data-rating="5"></span>
+                        <input type="hidden" name="whatever1" class="rating-value" value="0">
                     </div>
                 </div>
             </div>
@@ -142,7 +142,7 @@
         <!-- Description -->
         <div class="container">
             <h5 class="fw-bold me-4 fs-7">Description</h5>
-            <p class="text-start mt-3 fs-6" id="description"></p>
+            <p class="text-start mt-3 fs-6" id="description" style="word-wrap: break-word;"></p>
         </div>
     </div>
 
@@ -164,7 +164,8 @@
     </div>
 
     <!-- Rate the Recipe -->
-    <div class="container mt-5 border-top p-4 gap-5 flex flex-col justify-content-center align-items-center">
+    <div id="ratingSection"
+        class="container mt-5 border-top p-4 gap-5 flex flex-col justify-content-center align-items-center">
         <h2 class="text-start mb-4">Rate the recipe</h2>
         <div class="star-rating d-flex justify-content-center gap-3 p-2">
             <span class="fa fa-star-o display-5" data-rating="1"></span>
@@ -172,9 +173,10 @@
             <span class="fa fa-star-o display-5" data-rating="3"></span>
             <span class="fa fa-star-o display-5" data-rating="4"></span>
             <span class="fa fa-star-o display-5" data-rating="5"></span>
-            <input type="hidden" name="whatever1" class="rating-value" value="2.56">
+            <input type="hidden" name="whatever1" class="rating-value" value="0">
         </div>
     </div>
+
 
     <!-- Comment Form Section -->
     <div class="container d-flex flex-column align-items-center justify-content-center rounded-5 p-3 my-5"
@@ -197,10 +199,10 @@
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- Start Footer -->
     <footer class="text-center text-lg-start text-white bg-dark">
-        <div class="container p-4 pb-0">
-            <section class>
+        <div class="container p-4">
+            <section>
                 <div class="row">
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 fw-bold fs-5">
@@ -213,42 +215,39 @@
                             elit.
                         </p>
                     </div>
-                    <hr class="w-100 clearfix d-md-none" />
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
                         <p>
-                            <a class="text-white">Home</a>
+                            <a class="text-white nav-link" href="#">Home</a>
                         </p>
                         <p>
-                            <a class="text-white">Recipe</a>
+                            <a class="text-white nav-link" href="#">Recipe</a>
                         </p>
                         <p>
-                            <a class="text-white">Contact</a>
+                            <a class="text-white nav-link" href="#">Contact</a>
                         </p>
                         <p>
-                            <a class="text-white">About</a>
+                            <a class="text-white nav-link align-items-baseline" href="#">About</a>
                         </p>
                     </div>
-                    <hr class="w-100 clearfix d-md-none" />
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
                         <p>
-                            <a class="text-white">Your Account</a>
+                            <a class="text-white nav-link" href="#">Your Account</a>
                         </p>
                         <p>
-                            <a class="text-white">Become an Affiliate</a>
+                            <a class="text-white nav-link" href="#">Become an Affiliate</a>
                         </p>
                         <p>
-                            <a class="text-white">Shipping Rates</a>
+                            <a class="text-white nav-link" href="#">Shipping Rates</a>
                         </p>
                         <p>
-                            <a class="text-white">Help</a>
+                            <a class="text-white nav-link" href="#">Help</a>
                         </p>
                     </div>
-                    <hr class="w-100 clearfix d-md-none" />
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                        <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                        <p><i class="fas fa-circle-dollar-to-slot mr-3"></i> New York, NY 10012, US</p>
                         <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
                         <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
                         <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
@@ -260,138 +259,102 @@
                 <div class="row d-flex align-items-center">
                     <div class="col-md-7 col-lg-8 text-center text-md-start">
                         <div class="p-3">
-                            © 2024 Copyright:
+                            Â© 2024 Copyright:
                             <a class="text-white" href="#">CookingRecipe</a>
                         </div>
                     </div>
                     <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                        <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i
                                 class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                        <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i
                                 class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                        <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i
                                 class="fab fa-google"></i></a>
-                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                        <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i
                                 class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </section>
         </div>
+        </div>
     </footer>
+    <!-- End Footer -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script>
-        function initializeComments() {
-            let comments = JSON.parse(localStorage.getItem("comments")) || [];
+        // Récupérer l'index de la recette sélectionnée depuis le stockage local
+        // function initializeComments(selectedRecipeIndex) {
+        //     let comments = JSON.parse(localStorage.getItem("comments")) || [];
 
-            const commentsSection = document.getElementById('commentsSection');
-            const nameInput = document.getElementById('nameInput');
-            const emailInput = document.getElementById('emailInput');
-            const commentTextarea = document.getElementById('commentTextarea');
-            const submitButton = document.getElementById('submitButton');
+        //     const commentsSection = document.getElementById('commentsSection');
+        //     const nameInput = document.getElementById('nameInput');
+        //     const emailInput = document.getElementById('emailInput');
+        //     const commentTextarea = document.getElementById('commentTextarea');
+        //     const submitButton = document.getElementById('submitButton');
 
-            submitButton.addEventListener('click', function (event) {
-                event.preventDefault();
-                submitComment();
-            });
+        //     submitButton.addEventListener('click', function (event) {
+        //         event.preventDefault();
+        //         submitComment(selectedRecipeIndex);
+        //     });
 
-            displayComments();
+        //     displayComments();
 
-            function submitComment() {
-                const name = nameInput.value;
-                const email = emailInput.value;
-                const comment = commentTextarea.value;
+        //     function submitComment(selectedRecipeIndex) {
+        //         const name = nameInput.value;
+        //         const email = emailInput.value;
+        //         const comment = commentTextarea.value;
 
-                if (name.trim() !== '' && email.trim() !== '' && comment.trim() !== '') {
-                    const newComment = {
-                        name: name,
-                        email: email,
-                        comment: comment
-                    };
+        //         if (name.trim() !== '' && email.trim() !== '' && comment.trim() !== '') {
+        //             const newComment = {
+        //                 name: name,
+        //                 email: email,
+        //                 comment: comment,
+        //                 recipeIndex: selectedRecipeIndex // Ajouter l'index de la recette associée au commentaire
+        //             };
 
-                    comments.push(newComment);
-                    localStorage.setItem("comments", JSON.stringify(comments));
-                    displayComments();
+        //             comments.push(newComment);
+        //             localStorage.setItem("comments", JSON.stringify(comments));
+        //             displayComments();
 
-                    nameInput.value = '';
-                    emailInput.value = '';
-                    commentTextarea.value = '';
-                }
-            }
+        //             nameInput.value = '';
+        //             emailInput.value = '';
+        //             commentTextarea.value = '';
+        //         }
+        //     }
 
-            function displayComments() {
-                commentsSection.innerHTML = '';
+        //     function displayComments() {
+        //         commentsSection.innerHTML = '';
 
-                if (comments && comments.length > 0) {
-                    comments.forEach((comment, index) => {
-                        const commentElement = document.createElement('div');
-                        commentElement.classList.add('bg-light-subtle', 'bg-transparent', 'rounded-4', 'border', 'p-3', 'my-3');
-                        commentElement.innerHTML = `
-                            <h5 class="text-secondary pb-0">${comment.name}</h5>
-                            <p class="text-secondary border-bottom pb-3">${comment.email}</p>
-                            <p class="mx-5 my-1" style="word-wrap: break-word;">${comment.comment}</p>
-                            <button class="btn btn-dark mt-3 delete-comment-btn" data-index="${index}">Supprimer</button>
-                        `;
-                        commentsSection.appendChild(commentElement);
-                    });
+        //         if (comments && comments.length > 0) {
+        //             comments.forEach((comment, index) => {
+        //                 if (comment.recipeIndex === selectedRecipeIndex) { // Vérifier si le commentaire est associé à la recette sélectionnée
+        //                     const commentElement = document.createElement('div');
+        //                     commentElement.classList.add('bg-light-subtle', 'bg-transparent', 'rounded-4', 'border', 'p-3', 'my-3');
+        //                     commentElement.innerHTML = `
+        //                 <h5 class="text-secondary pb-0">${comment.name}</h5>
+        //                 <p class="text-secondary border-bottom pb-3">${comment.email}</p>
+        //                 <p class="mx-4 my-1" style="word-wrap: break-word;">${comment.comment}</p>
+        //                 <button class="btn btn-dark mt-3 delete-comment-btn" data-index="${index}">Supprimer</button>
+        //             `;
+        //                     commentsSection.appendChild(commentElement);
+        //                 }
+        //             });
 
-                    const deleteButtons = document.querySelectorAll('.delete-comment-btn');
-                    deleteButtons.forEach(button => {
-                        button.addEventListener('click', function (event) {
-                            const indexToDelete = event.target.dataset.index;
-                            comments.splice(indexToDelete, 1);
-                            localStorage.setItem("comments", JSON.stringify(comments));
-                            displayComments();
-                        });
-                    });
-                }
-            }
-        }
-        initializeComments();
-
-        const selectedIndex = localStorage.getItem("selectedRecipeIndex");
-        const recip = JSON.parse(localStorage.getItem("recipes"));
-
-        if (recip && recip.length > selectedIndex) {
-            const selectedRecipe = recip[selectedIndex];
-            // Remplir les éléments HTML avec les détails de la recette
-            document.getElementById('title').innerText = selectedRecipe.title;
-            document.getElementById('category').innerText = selectedRecipe.category;
-            document.getElementById('cookingTime').innerText = `${selectedRecipe.cookingTime.hours} h ${selectedRecipe.cookingTime.minutes} min`;
-            document.getElementById('cookTime').innerText = `${selectedRecipe.cookTime.hours} h ${selectedRecipe.cookTime.minutes} min`;
-            document.getElementById('authorName').innerText = selectedRecipe.authorName;
-            document.getElementById('selectedAuthorPhoto').src = selectedRecipe.authorPhoto;
-            document.getElementById('selectedImage').src = selectedRecipe.recipeImage;
-            document.getElementById('description').innerText = selectedRecipe.description;
-            document.getElementById('calories').innerText = selectedRecipe.nutritionInformation.calories;
-            document.getElementById('totalFat').innerText = selectedRecipe.nutritionInformation.totalFat;
-            document.getElementById('protein').innerText = selectedRecipe.nutritionInformation.protein;
-            document.getElementById('carbohydrate').innerText = selectedRecipe.nutritionInformation.carbohydrate;
-            document.getElementById('cholesterol').innerText = selectedRecipe.nutritionInformation.cholesterol;
-
-            let ingredientList = document.getElementById('addIngredient');
-            ingredientList.innerHTML = '';
-            selectedRecipe.ingredients.forEach(ingredient => {
-                let li = document.createElement('li');
-                li.classList.add('list-group-item');
-                li.textContent = ingredient;
-                ingredientList.appendChild(li);
-            });
-
-            let instructionList = document.getElementById('addInstruction');
-            instructionList.innerHTML = '';
-            selectedRecipe.instructions.forEach((instruction, index) => {
-                let li = document.createElement('li');
-                li.classList.add('list-group-item');
-                li.textContent = `${index + 1}. ${instruction}`;
-                instructionList.appendChild(li);
-            });
-        } else {
-            console.log("Recipe not found in localStorage.");
-        }
+        //             const deleteButtons = document.querySelectorAll('.delete-comment-btn');
+        //             deleteButtons.forEach(button => {
+        //                 button.addEventListener('click', function (event) {
+        //                     const indexToDelete = event.target.dataset.index;
+        //                     comments.splice(indexToDelete, 1);
+        //                     localStorage.setItem("comments", JSON.stringify(comments));
+        //                     displayComments();
+        //                 });
+        //             });
+        //         }
+        //     }
+        // }
     </script>
     <script src="script.js"></script>
 </body>
