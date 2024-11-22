@@ -1,3 +1,172 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const defaultRecipes = [
+        {
+            title: "Spaghetti Bolognese",
+            category: "Pasta",
+            authorName: "Chef Marco",
+            authorPhoto: "https://static.vecteezy.com/system/resources/previews/046/829/035/non_2x/handsome-male-chef-isolated-on-transparent-background-free-png.png",
+            recipeImage: "https://sagourmetfoodco.com.au/wp-content/uploads/2021/05/SAGFC-004-Spaghetti-Bolognese.jpg",
+            description: "A classic Italian pasta dish with rich meat sauce.",
+            nutritionInformation: {
+                calories: 500,
+                totalFat: 20,
+                protein: 25,
+                carbohydrate: 60,
+                cholesterol: 50
+            },
+            cookingTime: { hours: 0, minutes: 30 },
+            cookTime: { hours: 0, minutes: 20 },
+            ingredients: ["Spaghetti", "Ground beef", "Tomato sauce", "Garlic", "Onion", "Parmesan cheese"],
+            instructions: [
+                "Cook the spaghetti according to the package instructions.",
+                "In a pan, sauté garlic and onion until fragrant.",
+                "Add ground beef and cook until browned.",
+                "Pour in tomato sauce and simmer for 15 minutes.",
+                "Serve sauce over spaghetti and garnish with Parmesan cheese."
+            ],
+            rating: 4,
+            comments: []
+        },
+        {
+            title: "Chocolate Cake",
+            category: "Dessert",
+            authorName: "Chef Lisa",
+            authorPhoto: "https://img.freepik.com/premium-photo/women-chef-png-chef-smiling-white-background_1038537-21.jpg",
+            recipeImage: "https://assets.bonappetit.com/photos/59c924da3b3bf713cb63808a/1:1/w_2560%2Cc_limit/1017%2520WEB%2520WEEK1068.jpg",
+            description: "A moist and rich chocolate cake for all occasions.",
+            nutritionInformation: {
+                calories: 400,
+                totalFat: 15,
+                protein: 5,
+                carbohydrate: 60,
+                cholesterol: 30
+            },
+            cookingTime: { hours: 0, minutes: 45 },
+            cookTime: { hours: 0, minutes: 30 },
+            ingredients: ["Flour", "Cocoa powder", "Sugar", "Eggs", "Butter", "Baking powder"],
+            instructions: [
+                "Preheat oven to 180°C.",
+                "Mix dry ingredients in a bowl.",
+                "Add eggs and butter, then mix until smooth.",
+                "Pour batter into a greased pan.",
+                "Bake for 30 minutes or until a toothpick comes out clean."
+            ],
+            rating: 5,
+            comments: []
+        },
+        {
+            title: "Caesar Salad",
+            category: "Salad",
+            authorName: "Chef Julia",
+            authorPhoto: "https://pngimg.com/d/chef_PNG140.png",
+            recipeImage: "https://brooklynsupper.com/wp-content/uploads/2022/05/caesar-salad-3.jpg",
+            description: "A fresh and crisp Caesar salad with creamy dressing.",
+            nutritionInformation: {
+                calories: 150,
+                totalFat: 10,
+                protein: 5,
+                carbohydrate: 12,
+                cholesterol: 20
+            },
+            cookingTime: { hours: 0, minutes: 10 },
+            cookTime: { hours: 0, minutes: 0 },
+            ingredients: ["Romaine lettuce", "Croutons", "Parmesan cheese", "Caesar dressing"],
+            instructions: [
+                "Chop the lettuce and place it in a large bowl.",
+                "Add croutons and grated Parmesan cheese.",
+                "Drizzle Caesar dressing over the salad and toss gently.",
+                "Serve chilled."
+            ],
+            rating: 4,
+            comments: []
+        },
+        {
+            title: "Grilled Chicken",
+            category: "Main Course",
+            authorName: "Chef Andrew",
+            authorPhoto: "https://pngimg.com/d/chef_PNG102.png",
+            recipeImage: "https://www.budgetbytes.com/wp-content/uploads/2024/06/Grilled-Chicken-Overhead.jpg",
+            description: "Perfectly grilled chicken with a smoky flavor.",
+            nutritionInformation: {
+                calories: 350,
+                totalFat: 15,
+                protein: 40,
+                carbohydrate: 5,
+                cholesterol: 80
+            },
+            cookingTime: { hours: 0, minutes: 15 },
+            cookTime: { hours: 0, minutes: 20 },
+            ingredients: ["Chicken breasts", "Olive oil", "Garlic powder", "Paprika", "Salt", "Pepper"],
+            instructions: [
+                "Brush chicken breasts with olive oil and season with spices.",
+                "Preheat the grill to medium heat.",
+                "Grill the chicken for 6-7 minutes on each side until fully cooked.",
+                "Let the chicken rest for 5 minutes before serving."
+            ],
+            rating: 5,
+            comments: []
+        },
+        {
+            title: "Vegetable Stir-Fry",
+            category: "Vegetarian",
+            authorName: "Chef Mia",
+            authorPhoto: "https://www.pngkey.com/png/full/440-4408403_chef-png-chef-women-png.png",
+            recipeImage: "https://recipe30.com/wp-content/uploads/2021/08/Asian-stirfried-vegetables.jpg",
+            description: "A colorful mix of fresh vegetables stir-fried to perfection.",
+            nutritionInformation: {
+                calories: 200,
+                totalFat: 5,
+                protein: 6,
+                carbohydrate: 35,
+                cholesterol: 0
+            },
+            cookingTime: { hours: 0, minutes: 10 },
+            cookTime: { hours: 0, minutes: 10 },
+            ingredients: ["Broccoli", "Carrots", "Bell peppers", "Soy sauce", "Garlic", "Ginger"],
+            instructions: [
+                "Heat a wok or skillet over high heat.",
+                "Add oil, garlic, and ginger, and stir-fry for 30 seconds.",
+                "Add vegetables and stir-fry for 5-7 minutes until tender-crisp.",
+                "Drizzle soy sauce over the vegetables and toss to combine."
+            ],
+            rating: 4,
+            comments: []
+        },
+        {
+            title: "Margherita Pizza",
+            category: "Pizza",
+            authorName: "Chef Luigi",
+            authorPhoto: "https://pngimg.com/d/chef_PNG115.png",
+            recipeImage: "https://twicpics.moulinex.it/https://sebplatform.api.groupe-seb.com/statics/a24b6f39-ae71-4b11-97f0-f8ffd819eab4.jpg?w=1920&fit=scale",
+            description: "Classic Margherita pizza with fresh basil and mozzarella.",
+            nutritionInformation: {
+                calories: 300,
+                totalFat: 12,
+                protein: 10,
+                carbohydrate: 40,
+                cholesterol: 25
+            },
+            cookingTime: { hours: 0, minutes: 20 },
+            cookTime: { hours: 0, minutes: 15 },
+            ingredients: ["Pizza dough", "Tomato sauce", "Mozzarella cheese", "Fresh basil"],
+            instructions: [
+                "Preheat oven to 220°C.",
+                "Roll out the pizza dough and spread tomato sauce evenly.",
+                "Top with mozzarella cheese and fresh basil leaves.",
+                "Bake for 12-15 minutes until the crust is golden."
+            ],
+            rating: 5,
+            comments: []
+        }
+    ];
+
+    if (!localStorage.getItem('recipes')) {
+        localStorage.setItem('recipes', JSON.stringify(defaultRecipes));
+        console.log("Default recipes added to localStorage");
+    }
+});
+
+
 // rating 
 var $star_rating = $('.star-rating .fa');
 
@@ -550,7 +719,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function displayRecipeCards(pageNumber) {
     const searchInput = document.getElementById("searchInput");
     const recipes = JSON.parse(localStorage.getItem("recipes"));
-    const recipesPerPage = 2; // Nombre de recettes par page
+    const recipesPerPage = 4; // Nombre de recettes par page
 
     if (recipes && recipes.length > 0) {
         const filteredRecipes = filterRecipes(recipes, searchInput.value.trim().toLowerCase());
